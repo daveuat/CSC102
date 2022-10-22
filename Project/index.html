@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width", initial-scale="1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>UAT Space Program</title>
+        <script src="blastOff.js"></script>
+        <link rel="stylesheet" href="blastOff.css" type="text/css"> <!-- points to css stylesheet -->
         <img src="UATspaceLogo-2.jpg" alt="Logo"> <!-- showing logo/image to users -->
     </head>
     <body style="background: #000000;"> <!-- Starting body with background set to black.-->
@@ -22,60 +24,8 @@
         <div id="output" style="color:#980019;">10 Seconds on the Clock.</div> <!-- my divider used for all text during countdown-->
         <div id="1701d"></div> <!-- my divider used for gif at the end of the countdown-->
         <div id="controls"> <!-- divider set for buttons-->
-            <button onclick="output10();">Start Countdown</button> <!-- Button class to start script -->
-            <button onclick=reset()>Reset Timer</button> <!-- Button class to reset timer after it ends to run again. -->
+            <button onclick="start();" class="buttons">Start Countdown</button> <!-- Button class to start script -->
+            <button onclick="reset();" class="buttons">Reset Timer</button> <!-- Button class to reset timer after it ends to run again. -->
         </div>
-
-        <SCRIPT> // Start of Script class
-            var currTme = 10; //start time is set
-            function reset(){
-                window.location.reload(); //reloads page and sets everything back to the start. works the quickest.
-                alert("Timer Reset."); //confirmation to user that the timer is now reset and ready to run again.
-            }
-            function output10() { //start of first function in the 10 second countdown
-                document.getElementById("output").innerHTML = currTme + " Second(s) Left"; //displays starting amount of currTme with text
-                setTimeout(output9, 1000); //sets timeout to 1000ms or 1 second then runs next function
-            }
-            function output9() {
-                document.getElementById("output").innerHTML = --currTme + " Second(s) Left"; //displays amount after a decrement of 1. this will continue 8 more times
-                setTimeout(output8, 1000);
-            }
-            function output8() {
-                document.getElementById("output").innerHTML = --currTme + " Second(s) Left";
-                setTimeout(output7, 1000);
-            }
-            function output7() {
-                document.getElementById("output").innerHTML = --currTme + " Second(s) Left";
-                setTimeout(output6, 1000);
-            }
-            function output6() {
-                document.getElementById("output").innerHTML = --currTme + " Second(s) Left";
-                setTimeout(output5, 1000);
-            }
-            function output5() {
-                document.getElementById("output").innerHTML = --currTme + " Second(s) Left";
-                setTimeout(output4, 1000);
-            }
-            function output4() {
-                document.getElementById("output").innerHTML = --currTme + " Second(s) Left";
-                setTimeout(output3, 1000);
-            }
-            function output3() {
-                document.getElementById("output").innerHTML = --currTme + " Second(s) Left";
-                setTimeout(output2, 1000);
-            }
-            function output2() {
-                document.getElementById("output").innerHTML = --currTme + " Second(s) Left";
-                setTimeout(output1, 1000);
-            }
-            function output1() {
-                document.getElementById("output").innerHTML = --currTme + " Second(s) Left";
-                setTimeout(output0, 1000);
-            }
-            function output0() { //final part in countdown
-                document.getElementById("output").innerHTML = "Blast Off!"; //displays text to user
-                document.getElementById("1701d").innerHTML = '<img src="1701d.gif"/>'; //loads gif on screen for user
-            };
-        </SCRIPT>
     </body>
 </html>
