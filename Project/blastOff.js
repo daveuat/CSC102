@@ -4,10 +4,13 @@ function start()
 
     for(i=0; i < 11; i++) { // for loop function for timeout
         setTimeout(function() {
-            document.write("Countdown " + count + "<br>");
-
-            if(count <= 5) { //adds message at 5 second mark
-                document.write("Warning, less than 1/2 way to launch, " + count + " seconds left.<br>");
+            if(count > 5) // message for greater than 5 second mark
+            {
+                document.write("Countdown " + count + "<br>"); //writes to screen the first 5 countdown messages
+            }
+            else if(count <= 5) // different message for 5 seconds or less
+            {
+                document.write("Warning, less than 1/2 way to launch, time left = " + count + "<br>"); // secondary message once the 5 second mark is reached
             }
             count=count-1;
 
