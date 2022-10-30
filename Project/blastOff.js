@@ -22,7 +22,29 @@ function start()
         document.getElementById("1701d").innerHTML = '<img src="1701d.gif"/>'; //loads gif on screen for user
     }, 11000)
 }
-function reset(){
+function reset()
+{
     window.location.reload(); //reloads page and sets everything back to the start. works the quickest.
     alert("Timer Reset."); //confirmation to user that the timer is now reset and ready to run again.
+}
+function strings()
+{
+    var fName = document.getElementById("1stString").value; //string for first name
+    var lName = document.getElementById("2ndString").value; //string for last name
+    var badgeN = document.getElementById("3rdString").value; //string for badge number
+    var fullName = lName + ", " + fName; //combination of first name and last name
+     
+    if(fullName.length > 22 || fullName.length < 4) //name length validation. I had to make it 22 or greater because of my ", " that I used to pretty the alert up.
+    {
+        document.getElementById("access").innerHTML = "Name is Invalid. Please try again with valid data." //message displayed if invalid data is submitted.
+    }
+    else if (badgeN > 999 || badgeN < 1) //badge number data validation
+    { 
+        document.getElementById("access").innerHTML = "Invalid Badge Number. Please try again with valid data." //message displayed if invalid data is submitted.
+    }
+    else //if everything else is good this step starts
+    {
+        alert("Access granted, welcome " + fullName + " - Badge #: " + badgeN) //alert to user if data is correct after validation.
+        location.replace("Launch.html"); //loads page for launch control
+    }
 }

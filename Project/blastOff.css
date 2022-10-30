@@ -1,9 +1,9 @@
 .buttons
 {
     width: 100px;
-    height: 50px;
+    height: 100px;
     background-color: aqua;
-    border-radius: 200px;
+    border-radius: 100px;
     border-color: blueviolet;
 
 }

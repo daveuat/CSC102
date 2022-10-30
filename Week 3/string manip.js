@@ -29,4 +29,3 @@ function strings()
     document.getElementById("Updated string").innerHTML = "length of concatenated string = " + len
     */
 }
-
