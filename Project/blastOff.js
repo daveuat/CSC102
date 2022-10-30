@@ -6,11 +6,11 @@ function start()
         setTimeout(function() {
             if(count > 5) // message for greater than 5 second mark
             {
-                document.write("Countdown " + count + "<br>"); //writes to screen the first 5 countdown messages
+                document.getElementById("output").innerHTML = "Countdown " + count + "<br>"; //writes to screen the first 5 countdown messages
             }
             else if(count <= 5) // different message for 5 seconds or less
             {
-                document.write("Warning, less than 1/2 way to launch, time left = " + count + "<br>"); // secondary message once the 5 second mark is reached
+                document.getElementById("output").innerHTML = "Warning, less than 1/2 way to launch, time left = " + count + "<br>"; // secondary message once the 5 second mark is reached
             }
             count=count-1;
 
@@ -18,8 +18,8 @@ function start()
     }
     setTimeout(function() {
         alert("Blast Off!"); //blast off popup alert
-        document.write("Blast Off!" + "<br>"); //displays text to user
-        document.write('<img src="1701d.gif"/>'); //loads gif on screen for user
+        document.getElementById("output").innerHTML = "Blast Off!" + "<br>"; //displays text to user
+        document.getElementById("1701d").innerHTML = '<img src="1701d.gif"/>'; //loads gif on screen for user
     }, 11000)
 }
 function reset(){
