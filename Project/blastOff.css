@@ -2,8 +2,21 @@
 {
     width: 100px;
     height: 100px;
+    align-items: auto;
+    align-self: auto;
+    text-align: center;
     background-color: aqua;
     border-radius: 100px;
     border-color: blueviolet;
-
+}
+.buttons:hover
+{
+    width: 100px;
+    height: 100px;
+    align-items: auto;
+    align-self: auto;
+    text-align: center;
+    background-color: blueviolet;
+    border-radius: 100px;
+    border-color: blueviolet;
 }

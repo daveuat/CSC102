@@ -27,6 +27,10 @@ function reset()
     window.location.reload(); //reloads page and sets everything back to the start. works the quickest.
     alert("Timer Reset."); //confirmation to user that the timer is now reset and ready to run again.
 }
+function reset2() //reset with no alert
+{
+    window.location.reload(); //reloads page and sets everything back to the start. works the quickest.
+}
 function strings()
 {
     var fName = document.getElementById("1stString").value; //string for first name
@@ -46,5 +50,25 @@ function strings()
     {
         alert("Access granted, welcome " + fullName + " - Badge #: " + badgeN) //alert to user if data is correct after validation.
         location.replace("Launch.html"); //loads page for launch control
+    }
+}
+function customSound(){ //custom warp core background noise
+    mySound = new sound("tng.mp3");
+    mySound.play();
+}
+function stationBackground(){ //standard background noise from assignment
+    mySound = new sound("us-lab-background.mp3");
+    mySound.play();
+}
+function customSoundStop(){ //cant get this to work :(
+    sound.currentTime = 0;
+    sound.pause();
+    sound.remove();
+}
+function sound(src){ //helper function from Teams Live Session Week 4
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.play = function(){
+        this.sound.play();
     }
 }
