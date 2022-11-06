@@ -58,9 +58,10 @@ function customSound(){ //custom warp core background noise
 }
 function stationBackground(){ //standard background noise from assignment
     mySound = new sound("us-lab-background.mp3");
+    mySound.volume = 0.1; //found this on stackoverflow.com since the sound of this file is so loud. Does't work though.
     mySound.play();
 }
-function customSoundStop(){ //cant get this to work :(
+function customSoundStop(){ //cant get this to work :( - also found on stack overflow
     sound.currentTime = 0;
     sound.pause();
     sound.remove();
