@@ -1,0 +1,33 @@
+<!--Created by David Gregory -->
+<!DOCTYPE html>
+<html lang="en">
+    <head> <!-- standard heading setup-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>UAT Space Program</title>
+        <script src="final.js"></script>
+        <link rel="stylesheet" href="blastOff.css" type="text/css"> <!-- points to css stylesheet -->
+        <center> <!-- starting center of all page items-->
+        <img src="UATspaceLogo-2.jpg" alt="Logo"> <!-- showing logo/image to users -->
+    </head>
+    <body> <!-- Starting body with background set to black.-->
+        <h1 style="color:#980019;"> <!-- Setting h1 section and with the color red -->
+            UAT Space Program 
+        </h1>
+        <h2>
+            <div id="access" style="color:#980019;" >Please Login.</div> <!--used to ask user to login and will change depending on if the data inputted is valid or not-->
+        </h2>
+        <b><p id = "Updated string" style="color:white">Input Required Before Accessing Space Mission Data Page:</p></b> <!-- paragraph notifying user what must be completed before launching.-->
+        <b><form id ="creditSubmit" onsubmit="return false" style="color:white"> <!--Form start with fields required before running script.-->
+        First Name: <input type="text" id = "1stString"/> <!--string used for name and is inputted by user-->
+        <br>
+        Last Name: <input type = "text" id = "2ndString"/><!--another string used for name and is inputted by user-->
+        <br>
+        Badge Number: <input type = "number" id = "3rdString"/> <!--string used for badge id inputted by user-->
+        <br>
+        <input type = "submit" onclick = "strings();" /> <!--onclick or button press strings() will be ran.-->
+        </form></b>
+    </body>
+        </center>
+</html>
